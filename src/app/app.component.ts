@@ -11,6 +11,7 @@ export class AppComponent {
   title = '412_project';
 
   //form field
+  //
   email = new FormControl('', [Validators.required, Validators.email]);
 
   getErrorMessage() {
