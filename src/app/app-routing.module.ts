@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
 
@@ -12,8 +13,14 @@ const routes: Routes = [
   children :[
   {
     path: '',
-    component : LoginComponent
+    component : LoginComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
   }
+  
+  
 ]
 }
 ];
