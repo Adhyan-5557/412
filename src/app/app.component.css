@@ -1,3 +1,5 @@
-.example-container mat-form-field + mat-form-field {
-    margin-right: 8px;
-  }
+.content-body{
+  min-height: 100%;
+  padding: 60px 1rem;
+  display:block;
+}
