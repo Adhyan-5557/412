@@ -1,0 +1,96 @@
+
+<!-- 
+<form>
+  <div class = "row">
+    <div style="text-align: center;" >
+      <span class>Register</span>
+    </div>
+
+  </div>
+
+  <div class="row">
+      <mat-form-field hintLabel="" appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput id = "firstname" type = "text" #input maxlength="10" placeholder="Ex. Nougat" formControlName="firstname">
+        <mat-hint align="end">{{input.value.length}}/10</mat-hint>
+      </mat-form-field>  
+  </div>
+
+  <div>
+    <mat-form-field  appearance="fill">
+
+      <mat-label >Last Name</mat-label>
+      <input matInput #input maxlength="10" placeholder="Ex. Well" formControlName="lastname">
+      <mat-hint align="end">{{input.value.length}}/10</mat-hint>
+    </mat-form-field>
+  </div>
+
+
+</form> -->
+
+<div mat-dialog-title class="title">
+  <h1>Register New User</h1>
+</div>
+
+<form [formGroup]="registerForm" (ngSubmit)="onClick3" >
+<div mat-dialog-content class="content">
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input matInput id = "firstname" formControlName="firstname" type="text" placeholder="Ex.Joe">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input matInput id = "lastname" formControlName="lastname" type="text" placeholder="Ex. Patel">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput id = "email" formControlName="email" type="email" placeholder="Ex. test@gmail.com">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Choose a date</mat-label>
+      <input matInput id = "DOB"[matDatepicker]="picker" formControlName="DOB">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+  </div>
+
+  <div class="row">
+    <mat-radio-group aria-label="Select an option" formControlName="gender">
+      <mat-label>Gender</mat-label>
+      <mat-radio-button   value="male">Male</mat-radio-button>
+      <mat-radio-button  value="Female">Female</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>Hometown</mat-label>
+      <input matInput id = "hometown" formControlName="hometown" type="text" placeholder="Ex. Chandler">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="content" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput id = "passoword" formControlName="password" type="password">
+    </mat-form-field>
+  </div>
+
+</div>
+
+
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" type="submit" (click) ="onClick3()">Create</button>
+  <button mat-raised-button (click) ="onClick4()" >Cancel</button>
+</div>
+
+</form>

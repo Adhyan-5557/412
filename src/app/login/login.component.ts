@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { RegisterComponent } from '../register/register.component';
 
 
 @Component({
@@ -12,7 +14,9 @@ export class LoginComponent implements OnInit {
 
   hide: boolean = false;
 
-  constructor(private fb: FormBuilder,private router: Router) {
+ 
+
+  constructor(private fb: FormBuilder,private router: Router, private _dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -34,6 +38,11 @@ export class LoginComponent implements OnInit {
   onClick(){
     // this is to submit the login form. upon clicking it redirects pace to home screen. 
     this.router.navigateByUrl('/home');
+  }
+
+  onClick2(){
+    // this is to submit the login form. upon clicking it redirects pace to home screen. 
+    this._dialog.open(RegisterComponent);
   }
 
 }
