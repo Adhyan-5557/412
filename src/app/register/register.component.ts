@@ -50,7 +50,7 @@ export class RegisterComponent {
 
   onClick4(){
     // this is to submit the login form. upon clicking it redirects pace to home screen. 
-    // this is test
+    
     this.router.navigateByUrl('/login');
   }
 
