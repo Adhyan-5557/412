@@ -16,7 +16,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatTableModule } from '@angular/material/table';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import {MatRadioModule} from '@angular/material/radio';
     MatToolbarModule,
     MatDialogModule,
     MatDatepickerModule,
+    MatTableModule,
     MatNativeDateModule,
     MatRadioModule,
-  
+    MatExpansionModule
     
   ],
   providers: [],
