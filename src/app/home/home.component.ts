@@ -97,11 +97,66 @@ const PHOTO_DATA: appPhotos[] =
 })
 export class HomeComponent {
 
-  numberOfLikes: number = 1;
+  num1 = 0;
+  num2 = 0;
+  num3 = 0;
+  num4 = 0;
+  num5 = 0;
+  num6 = 0;
+  num7 = 0;
+  num8 = 0;
+  num9 = 0;
+  num10 = 0;
 
-  onClick3() {
-    this.numberOfLikes++;
+  like_1() {
+    this.num1++;
   }
+
+  like_2() {
+    this.num2++;
+  }
+
+  like_3() {
+    this.num3++;
+  }
+
+  like_4() {
+    this.num4++;
+  }
+  like_5() {
+    this.num5++;
+  }
+  like_6() {
+    this.num6++;
+  }
+  like_7() {
+    this.num7++;
+  }
+  like_8() {
+    this.num8++;
+  }
+  like_9() {
+    this.num9++;
+
+  }
+  like_10() {
+    this.num10++;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   constructor(private router: Router) {
   }
   displayedColumns: string[] = [ 'name'];
