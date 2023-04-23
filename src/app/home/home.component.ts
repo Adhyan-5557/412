@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
+import {Input} from '@angular/core';
 
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -12,6 +13,7 @@ export interface appPhotos {
   data: number;
   album_id: number;
   tag: string;
+ 
 
 }
 
@@ -72,9 +74,9 @@ const USER_DATA: appUsers[] =
 
 const PHOTO_DATA: appPhotos[] =
   [
-    { photo_id: 1, caption: 'This is my photo', data: 1011, album_id: 1, tag: "ohheythere" },
+    { photo_id: 1, caption: 'This is my photo', data: 1011, album_id: 1, tag: "ohheythere"},
     { photo_id: 2, caption: 'This is my photo2', data: 1010, album_id: 1, tag: "sundayfunday" },
-    { photo_id: 3, caption: 'This is my photo3', data: 1111, album_id: 2, tag: "letitbe" },
+    { photo_id: 3, caption: 'This is my photo3', data: 1111, album_id: 2, tag: "letitbe"},
     { photo_id: 4, caption: 'This is my photo4', data: 1110, album_id: 3, tag: "hey" },
     { photo_id: 5, caption: 'This is my photo5', data: 1100, album_id: 4, tag: "ican" },
     { photo_id: 6, caption: 'This is my photo6', data: 1000, album_id: 5, tag: "hey" },
@@ -95,6 +97,11 @@ const PHOTO_DATA: appPhotos[] =
 })
 export class HomeComponent {
 
+  numberOfLikes: number = 1;
+
+  onClick3() {
+    this.numberOfLikes++;
+  }
   constructor(private router: Router) {
   }
   displayedColumns: string[] = [ 'name'];
@@ -110,6 +117,7 @@ export class HomeComponent {
     this.dataSource2.filter = filterValue2.trim().toLowerCase();
   }
 
+  
 
 
 
@@ -121,5 +129,7 @@ export class HomeComponent {
     // this is to submit the login form. upon clicking it redirects pace to home screen. 
     this.router.navigateByUrl('');
   }
+
+ 
 
 }

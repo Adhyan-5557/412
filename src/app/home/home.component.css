@@ -68,3 +68,8 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
+.like{
+    align-items:center;
+    background: fixed ;
+}
