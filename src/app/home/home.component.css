@@ -1,8 +1,8 @@
-
-.navbar{
-    justify-content: space-between;
+.navbar {
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-span{
-    padding-right: 1rem;
+span {
+  padding-right: 1rem;
 }
