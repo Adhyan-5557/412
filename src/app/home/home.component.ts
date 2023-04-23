@@ -17,6 +17,12 @@ export interface appPhotos {
 
 }
 
+export interface topContributor {
+  score: number;
+  fname: string;
+  lname: string;
+}
+
 
 
 export interface appAlbums {
@@ -89,6 +95,20 @@ const PHOTO_DATA: appPhotos[] =
   ]
 
 
+const CONTRIBUTOR_DATA: topContributor[] =
+  [
+    
+    
+    { score: 23, fname: 'Hugh', lname: 'Jackman' },
+    { score: 17, fname: 'Jack', lname: 'Nicholson' },
+    { score: 11, fname: 'Emma', lname: 'Watson' },
+    { score: 9, fname: 'Lisa', lname: 'Mona' },
+    { score: 4, fname: 'Nick', lname: 'Fury' },
+
+
+  ]
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -145,6 +165,93 @@ export class HomeComponent {
 
 
 
+  friendsList = " list of friends";
+  btn1 = "add";
+
+  add_1() {
+    this.btn1 = "user added!";
+
+  }
+
+
+  btn2 = "add";
+
+  add_2() {
+    this.btn2 = "user added!";
+  }
+
+  btn3 = "add";
+
+  add_3() {
+    this.btn3 = "user added!";
+  }
+
+
+  btn4 = "add";
+
+  add_4() {
+    this.btn4 = "user added!";
+  }
+
+
+  btn5 = "add";
+
+  add_5() {
+    this.btn5 = "user added!";
+  }
+
+
+  btn6 = "add";
+
+  add_6() {
+    this.btn6 = "user added!";
+  }
+
+
+  btn7 = "add";
+
+  add_7() {
+    this.btn7 = "user added!";
+  }
+
+
+
+  btn8 = "add";
+
+  add_8() {
+    this.btn8 = "user added!";
+  }
+
+
+
+  btn9 = "add";
+
+  add_9() {
+    this.btn9 = "user added!";
+  }
+
+
+  btn10 = "add";
+
+  add_10() {
+    this.btn10 = "user added!";
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -159,11 +266,23 @@ export class HomeComponent {
 
   constructor(private router: Router) {
   }
+
   displayedColumns: string[] = [ 'name'];
   dataSource = new MatTableDataSource(ALBUM_DATA);
 
   displayedColumns2: string[] = ['caption', 'data', 'tag'];
   dataSource2 = new MatTableDataSource(PHOTO_DATA);
+
+  displayedColumns3: string[] = ['score', 'fname', 'lname'];
+  dataSource3 = new MatTableDataSource(CONTRIBUTOR_DATA);
+
+
+  displayedColumns4: string[] = [ 'fname', 'lname'];
+  dataSource4 = new MatTableDataSource(USER_DATA);
+
+
+
+
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
