@@ -1,15 +1,12 @@
-<mat-toolbar color="primary" class="navbar">
+<mat-toolbar class="navbar">
 
-
-  <div>
-    <h1>PhotoShare</h1>
-  </div>
-
-  <div>
-    <button (click)="onClick()" mat-flat-button color="primary">User Page</button>
-    <button (click)="onClick2()" mat-flat-button color="primary">Logout</button>
-
-  </div>
+  <mat-toolbar-row>
+    <span class="title">PhotoShare</span>
+    <span class="toolbar-item-spacer"></span>
+    <button (click)="onClick()" class="button-47" role="button">User Page</button>
+    <button (click)="onClick2()" class="button-47" role="button">Logout</button>
+  </mat-toolbar-row>
+  <mat-toolbar-row><button class="button-54" role="button">Add Photo</button></mat-toolbar-row>
 
 </mat-toolbar>
 
@@ -306,31 +303,13 @@
 </mat-expansion-panel>
 
 
+<mat-toolbar class="navbar">
+  <mat-form-field>
+    <input (keyup)="applyFilter2($any($event.target).value)" matInput placeholder="Search feed by user/tag...">
+  </mat-form-field>
+  <mat-toolbar-row></mat-toolbar-row>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<mat-form-field>
-  <input (keyup)="applyFilter2($any($event.target).value)" matInput placeholder="Search feed by user/tag...">
-</mat-form-field>
+</mat-toolbar>
 
 
 <mat-table [dataSource]="dataSource2">
@@ -363,10 +342,14 @@
 
 
 
+<mat-toolbar class="navbar">
+  <mat-form-field>
+    <input (keyup)="applyFilter($any($event.target).value)" matInput placeholder="Search albums...">
+  </mat-form-field>
 
-<mat-form-field>
-  <input (keyup)="applyFilter($any($event.target).value)" matInput placeholder="Search albums...">
-</mat-form-field>
+  <mat-toolbar-row><button class="button-54" role="button">Add Album</button></mat-toolbar-row>
+
+</mat-toolbar>
 
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -383,7 +366,7 @@
 
   <ng-container matColumnDef="album_id">
     <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
-    <mat-cell *matCellDef="let album"> {{album.album_id}}</mat-cell>
+    <mat-cell *matCellDef="let album">{{album.album_id}}</mat-cell>
   </ng-container>
 
 
