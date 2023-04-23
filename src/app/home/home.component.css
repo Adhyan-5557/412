@@ -6,3 +6,8 @@
 span{
     padding-right: 1rem;
 }
+
+.like{
+    align-items:center;
+    background: fixed ;
+}
