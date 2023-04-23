@@ -32,5 +32,37 @@
       "parentId": "2",
       "createdAt": "2021-08-16T23:00:33.010+02:00"
     }
+  ],
+  "users": [
+    {
+      "firstname": "hi",
+      "lastname": "2",
+      "email": "hi@gmisl.com",
+      "DOB": "2023-04-10T07:00:00.000Z",
+      "gender": "Female",
+      "password": "1234",
+      "hometown": "tempe",
+      "id": 1
+    },
+    {
+      "firstname": "t1",
+      "lastname": "w2",
+      "email": "t2@w2.com",
+      "DOB": "2023-04-03T07:00:00.000Z",
+      "gender": "male",
+      "password": "hjk",
+      "hometown": "hj",
+      "id": 3
+    },
+    {
+      "firstname": "ghj",
+      "lastname": "ghj",
+      "email": "ghj@hj",
+      "DOB": "2023-04-03T07:00:00.000Z",
+      "gender": "male",
+      "password": "yuioku",
+      "hometown": "h",
+      "id": 4
+    }
   ]
 }
