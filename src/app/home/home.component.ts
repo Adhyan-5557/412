@@ -1,15 +1,9 @@
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
-
-
+import { Input } from '@angular/core';
 
 import { DropDownListComponent } from '@syncfusion/ej2-angular-dropdowns';
-
-
-import {Input} from '@angular/core';
-
-import { RegisterComponent } from '../register/register.component';
 
 
 import { MatTableDataSource } from '@angular/material/table';
@@ -159,15 +153,15 @@ const COLUMNS_SCHEMA = [
 })
 export class HomeComponent {
 
-  num1 = 9;
-  num2 = 18;
-  num3 = 3;
-  num4 = 11;
-  num5 = 4;
-  num6 = 2;
-  num7 = 90;
-  num8 = 2;
-  num9 = 1;
+  num1 = 0;
+  num2 = 0;
+  num3 = 0;
+  num4 = 0;
+  num5 = 0;
+  num6 = 0;
+  num7 = 0;
+  num8 = 0;
+  num9 = 0;
   num10 = 0;
 
   like_1() {
@@ -306,7 +300,11 @@ export class HomeComponent {
 
 
 
- 
+  constructor(
+    private router: Router,
+
+
+  ) { }
 
   @ViewChild('dropdownlistelement')
 
@@ -338,15 +336,6 @@ export class HomeComponent {
 
 
 
-
-
-
-
-
-  constructor(private router: Router,private _dialog: MatDialog) {
-  }
-
-
   displayedColumns: string[] = [ 'name'];
   dataSource = new MatTableDataSource(ALBUM_DATA);
 
@@ -359,7 +348,6 @@ export class HomeComponent {
 
   displayedColumns4: string[] = [ 'fname', 'lname'];
   dataSource4 = new MatTableDataSource(USER_DATA);
-  
 
 
 
@@ -377,11 +365,9 @@ export class HomeComponent {
   
 
 
-  userPage() {
+  onClick() {
     // this is to submit the login form. upon clicking it redirects pace to home screen. 
-    const dialogRef = this._dialog.open(RegisterComponent,{
-      
-    })
+    this.router.navigateByUrl('');
   }
   onClick2() {
     // this is to submit the login form. upon clicking it redirects pace to home screen. 
