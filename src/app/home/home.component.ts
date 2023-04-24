@@ -194,66 +194,135 @@ export class HomeComponent {
     this.num10++;
   }
 
-  friendsList = ' list of friends';
-  btn1 = 'add';
+
+
+
+
+
+
+
+
+
+
+
+  added1 = '';
+  added2 = '';
+  added3 = '';
+  added4 = '';
+  added5 = '';
+  added6 = '';
+  added7 = '';
+  added8 = '';
+  added9 = '';
+  added10 = '';
+
+  btn1 = "add";
+
 
   add_1() {
-    this.btn1 = 'user added!';
+
+    this.btn1 = "user added!";
+    this.added1 = "friend added";
   }
 
-  btn2 = 'add';
+
+  btn2 = "add";
 
   add_2() {
-    this.btn2 = 'user added!';
+    this.btn2 = "user added!";
+    this.added2 = "friend 2 added";
+
   }
 
-  btn3 = 'add';
+  btn3 = "add";
 
   add_3() {
-    this.btn3 = 'user added!';
+    this.btn3 = "user added!";
+    this.added3 = "friend 3 added";
   }
 
-  btn4 = 'add';
+
+  btn4 = "add";
 
   add_4() {
-    this.btn4 = 'user added!';
+    this.btn4 = "user added!";
+    this.added4 = "friend 4 added";
   }
 
-  btn5 = 'add';
+
+  btn5 = "add";
 
   add_5() {
-    this.btn5 = 'user added!';
+    this.btn5 = "user added!";
+    this.added5 = "friend 5 added";
   }
 
-  btn6 = 'add';
+
+  btn6 = "add";
 
   add_6() {
-    this.btn6 = 'user added!';
+    this.btn6 = "user added!";
+    this.added6 = "friend 6 added";
   }
 
-  btn7 = 'add';
+
+  btn7 = "add";
 
   add_7() {
-    this.btn7 = 'user added!';
+    this.btn7 = "user added!";
+    this.added7 = "friend 7 added";
   }
 
-  btn8 = 'add';
+
+
+  btn8 = "add";
 
   add_8() {
-    this.btn8 = 'user added!';
+    this.btn8 = "user added!";
+    this.added8 = "friend 8 added";
   }
 
-  btn9 = 'add';
+
+
+  btn9 = "add";
 
   add_9() {
-    this.btn9 = 'user added!';
+    this.btn9 = "user added!";
+    this.added9 = "friend 9 added";
   }
 
-  btn10 = 'add';
+
+  btn10 = "add";
 
   add_10() {
-    this.btn10 = 'user added!';
+    this.btn10 = "user added!";
+    this.added10 = "friend 10 added";
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   constructor(
     private router: Router,
