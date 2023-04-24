@@ -1,32 +1,27 @@
+<!-- Navbar  -->
 <mat-toolbar class="navbar">
-
   <mat-toolbar-row>
     <span class="title">PhotoShare</span>
     <span class="toolbar-item-spacer"></span>
-    <button (click)="onClick()" class="button-47" role="button">User Page</button>
+    <button (click)="userPage()" class="button-47" role="button">User Page</button>
     <button (click)="onClick2()" class="button-47" role="button">Logout</button>
   </mat-toolbar-row>
   <mat-toolbar-row><button class="button-54" role="button">Add Photo</button></mat-toolbar-row>
-
 </mat-toolbar>
 
 
-
-
+<!-- Photo Section -->
 <mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>
       Photo1
     </mat-panel-title>
-
     <mat-panel-title>
       <button class="button-14" role="button">Remove</button>
     </mat-panel-title>
 
     <mat-panel-title>
       user
-
-
     </mat-panel-title>
 
     <mat-panel-description>
@@ -34,7 +29,7 @@
     </mat-panel-description>
 
   </mat-expansion-panel-header>
-  <p> tags </p>
+  <p> Tags </p>
   <mat-icon>person_add</mat-icon>
   <button (click)="add_1()" mat-flat-button color="primary"> {{btn1}} </button>
   <comments currentUserId="1"></comments>
@@ -77,11 +72,6 @@
   </mat-action-row>
 
 </mat-expansion-panel>
-
-
-
-
-
 
 <mat-expansion-panel>
   <mat-expansion-panel-header>
@@ -268,11 +258,6 @@
 
 </mat-expansion-panel>
 
-
-
-
-
-
 <mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>
@@ -334,7 +319,9 @@
   </mat-action-row>
 
 </mat-expansion-panel>
+<br>
 
+<!-- Friends Section -->
 
 
 
@@ -352,7 +339,7 @@
   <mat-icon [inline]="true">group</mat-icon>
 </div>
 
-<button class="button-16" role="button">Friends</button>
+<button class="button-16" role="button">FriendsList </button>
 
 <p>{{this.added1}}</p>
 <p>{{this.added2}}</p>
@@ -379,19 +366,7 @@
     </ejs-dropdownlist>
   </div>
 
-  <div id="button-controls">
-
-    <div class="button_add">
-      <button ej-button id="addButton" class="e-control e-btn"
-              (click)="onAddItems()">
-        Add
-      </button>
-
-
-    </div>
-
-
-  </div>
+  
 </div>
 
 
@@ -406,34 +381,48 @@
 
 
 
+<mat-toolbar class="navbar">
+  <!-- <mat-toolbar-row><mat-icon>group</mat-icon></mat-toolbar-row> -->
+  <mat-toolbar-row>
+    <button class="button-16" role="button">
+      <mat-icon class="friendsIcon">group</mat-icon>
+      <span class="friends-button-title">Friends</span>
+    </button>
+    <!-- <mat-icon class="friendsIcon">group</mat-icon> -->
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-table [dataSource]="dataSource4">
+  <ng-container matColumnDef="fname">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
 
 
+<br>
 
 
+<!-- Top 5 Contributors -->
 
-
-<button class="button-16" role="button">Top 5 Contributors</button>
-
-
-
+<mat-toolbar class="navbar">
+  <mat-toolbar-row><button class="button-16" role="button">Top 5 Contributors</button></mat-toolbar-row>
+</mat-toolbar>
 
 <mat-table [dataSource]="dataSource3">
 
 
   <ng-container matColumnDef="score">
-    <mat-header-cell *matHeaderCellDef>score</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>Score</mat-header-cell>
     <mat-cell *matCellDef="let photo"> {{photo.score}}</mat-cell>
   </ng-container>
 
 
   <ng-container matColumnDef="fname">
-    <mat-header-cell *matHeaderCellDef>first name</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>First name</mat-header-cell>
     <mat-cell *matCellDef="let photo"> {{photo.fname}}</mat-cell>
   </ng-container>
 
 
   <ng-container matColumnDef="lname">
-    <mat-header-cell *matHeaderCellDef>last name</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>Last name</mat-header-cell>
     <mat-cell *matCellDef="let photo"> {{photo.lname}}</mat-cell>
   </ng-container>
 
@@ -442,37 +431,34 @@
   <mat-row *matRowDef="let row; columns: displayedColumns3;"></mat-row>
 
 </mat-table>
+<br>
 
 
-
+<!-- Search feed by user/tag -->
 
 <mat-toolbar class="navbar">
-  <mat-form-field>
-    <input (keyup)="applyFilter2($any($event.target).value)" matInput placeholder="Search feed by user/tag...">
-  </mat-form-field>
-  <mat-toolbar-row></mat-toolbar-row>
+
+  <mat-toolbar-row><button class="button-16" role="button">Feed Users/Tags</button></mat-toolbar-row>
 
 </mat-toolbar>
-
+<mat-form-field>
+  <input (keyup)="applyFilter2($any($event.target).value)" matInput placeholder="Search feed by user/tag...">
+</mat-form-field>
 
 <mat-table [dataSource]="dataSource2">
-
-
-
-
   <ng-container matColumnDef="caption">
-    <mat-header-cell *matHeaderCellDef>caption</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>Caption</mat-header-cell>
     <mat-cell *matCellDef="let photo"> {{photo.caption}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="data">
-    <mat-header-cell *matHeaderCellDef>data</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>Data</mat-header-cell>
     <mat-cell *matCellDef="let photo"> {{photo.data}}</mat-cell>
   </ng-container>
 
 
   <ng-container matColumnDef="tag">
-    <mat-header-cell *matHeaderCellDef>tag</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>Tag</mat-header-cell>
     <mat-cell *matCellDef="let photo"> {{photo.tag}}</mat-cell>
   </ng-container>
 
@@ -482,17 +468,19 @@
 
 </mat-table>
 
+<br>
 
 
+<!-- Album Section -->
 
 <mat-toolbar class="navbar">
-  <mat-form-field>
-    <input (keyup)="applyFilter($any($event.target).value)" matInput placeholder="Search albums...">
-  </mat-form-field>
-
-  <mat-toolbar-row><button class="button-54" role="button">Add Album</button></mat-toolbar-row>
-
+  <mat-toolbar-row>
+    <button class="button-54" role="button">Add Album</button>
+  </mat-toolbar-row>
 </mat-toolbar>
+<mat-form-field>
+  <input (keyup)="applyFilter($any($event.target).value)" matInput placeholder="Search albums...">
+</mat-form-field>
 
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
