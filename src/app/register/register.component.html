@@ -64,8 +64,8 @@
 
   <div class="row">
     <mat-radio-group aria-label="Select an option" formControlName="gender">
-      <mat-label>Gender</mat-label>
-      <mat-radio-button   value="male">Male</mat-radio-button>
+      <mat-label>Gender</mat-label >
+      <mat-radio-button required=""  value="male">Male</mat-radio-button>
       <mat-radio-button  value="Female">Female</mat-radio-button>
     </mat-radio-group>
   </div>
@@ -73,14 +73,14 @@
   <div class="row">
     <mat-form-field appearance="outline">
       <mat-label>Hometown</mat-label>
-      <input matInput id = "hometown" formControlName="hometown" type="text" placeholder="Ex. Chandler">
+      <input matInput id = "hometown" formControlName="hometown" type="text" placeholder="Ex. Chandler" required="">
     </mat-form-field>
   </div>
 
   <div class="row">
     <mat-form-field class="content" appearance="outline">
       <mat-label>Password</mat-label>
-      <input matInput id = "passoword" formControlName="password" type="password">
+      <input matInput id = "passoword" formControlName="password" type="password" required="">
     </mat-form-field>
   </div>
 

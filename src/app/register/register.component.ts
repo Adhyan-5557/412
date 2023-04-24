@@ -7,6 +7,7 @@ import { UserService } from '../services/user.service';
 import { DialogRef } from '@angular/cdk/dialog';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -53,9 +54,11 @@ export class RegisterComponent implements OnInit {
     // this is to submit the login form. upon clicking it redirects pace to home screen. 
     if(this.registerForm.valid){
       this.userService.addUser(this.registerForm.value).subscribe({
-        next: (val:any) => {  
+        next: (val:any) => { 
           alert('User added successfully'); 
-          this.dialogRef.close();
+          this.dialogRef.close(); 
+
+          
         },
         error: (err:any) => {
           console.error(err);
