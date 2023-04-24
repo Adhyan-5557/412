@@ -336,37 +336,81 @@
 </mat-expansion-panel>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="icon">
   <mat-icon [inline]="true">group</mat-icon>
 </div>
 
 <button class="button-16" role="button">Friends</button>
 
+<p>{{this.added1}}</p>
+<p>{{this.added2}}</p>
+<p>{{this.added3}}</p>
+<p>{{this.added4}}</p>
+<p>{{this.added5}}</p>
+<p>{{this.added6}}</p>
+<p>{{this.added7}}</p>
+<p>{{this.added8}}</p>
+<p>{{this.added9}}</p>
+<p>{{this.added10}}</p>
 
 
-<mat-table [dataSource]="dataSource4">
+
+
+<div class="controls">
+
+
+
+  <div class="dropdownlist">
+    <br>
+    <ejs-dropdownlist #dropdownlistelement [dataSource]='localData' [fields]='dataFields'
+                      placeholder='Friends List'>
+    </ejs-dropdownlist>
+  </div>
+
+  <div id="button-controls">
+
+    <div class="button_add">
+      <button ej-button id="addButton" class="e-control e-btn"
+              (click)="onAddItems()">
+        Add
+      </button>
+
+
+    </div>
+
+
+  </div>
+</div>
 
 
 
 
 
-  <ng-container matColumnDef="fname">
-    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
-
-    <mat-cell *matCellDef="let photo"> {{photo.fname}}</mat-cell>
-  </ng-container>
 
 
-  <ng-container matColumnDef="lname">
-    <mat-header-cell *matHeaderCellDef></mat-header-cell>
-    <mat-cell *matCellDef="let photo"> {{photo.lname}}</mat-cell>
-  </ng-container>
 
 
-  <mat-header-row *matHeaderRowDef="displayedColumns4"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns4;"></mat-row>
 
-</mat-table>
+
+
+
+
+
+
+
+
 
 <button class="button-16" role="button">Top 5 Contributors</button>
 
