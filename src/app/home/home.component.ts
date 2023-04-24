@@ -1,16 +1,9 @@
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Input } from '@angular/core';
-
-import { DropDownListComponent } from '@syncfusion/ej2-angular-dropdowns';
-
+import {Input} from '@angular/core';
 
 import { MatTableDataSource } from '@angular/material/table';
-import { MatDialog } from '@angular/material/dialog';
-import { ViewChild } from '@angular/core';
-
-
 
 
 
@@ -116,35 +109,6 @@ const CONTRIBUTOR_DATA: topContributor[] =
   ]
 
 
-const COLUMNS_SCHEMA = [
-  {
-    key: 'isSelected',
-    type: 'isSelected',
-    label: '',
-  },
-
-  {
-    key: 'name',
-    type: 'text',
-    label: 'Full Name',
-  },
-
-  {
-    key: 'isEdit',
-    type: 'isEdit',
-    label: '',
-  }
-
-]
-
-
-
-
-
-
-
-
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -201,25 +165,12 @@ export class HomeComponent {
 
 
 
-  
-  added1 = '';
-  added2 = '';
-  added3 = '';
-  added4 = '';
-  added5 = '';
-  added6 = '';
-  added7 = '';
-  added8 = '';
-  added9 = '';
-  added10 = '';
-
+  friendsList = " list of friends";
   btn1 = "add";
 
-
   add_1() {
-
     this.btn1 = "user added!";
-    this.added1 = "friend added";
+
   }
 
 
@@ -227,15 +178,12 @@ export class HomeComponent {
 
   add_2() {
     this.btn2 = "user added!";
-    this.added2 = "friend 2 added";
-   
   }
 
   btn3 = "add";
 
   add_3() {
     this.btn3 = "user added!";
-    this.added3 = "friend 3 added";
   }
 
 
@@ -243,7 +191,6 @@ export class HomeComponent {
 
   add_4() {
     this.btn4 = "user added!";
-    this.added4 = "friend 4 added";
   }
 
 
@@ -251,7 +198,6 @@ export class HomeComponent {
 
   add_5() {
     this.btn5 = "user added!";
-    this.added5 = "friend 5 added";
   }
 
 
@@ -259,7 +205,6 @@ export class HomeComponent {
 
   add_6() {
     this.btn6 = "user added!";
-    this.added6 = "friend 6 added";
   }
 
 
@@ -267,7 +212,6 @@ export class HomeComponent {
 
   add_7() {
     this.btn7 = "user added!";
-    this.added7 = "friend 7 added";
   }
 
 
@@ -276,7 +220,6 @@ export class HomeComponent {
 
   add_8() {
     this.btn8 = "user added!";
-    this.added8 = "friend 8 added";
   }
 
 
@@ -285,7 +228,6 @@ export class HomeComponent {
 
   add_9() {
     this.btn9 = "user added!";
-    this.added9 = "friend 9 added";
   }
 
 
@@ -293,48 +235,37 @@ export class HomeComponent {
 
   add_10() {
     this.btn10 = "user added!";
-    this.added10 = "friend 10 added";
   }
 
 
 
 
 
-  constructor(
-    private router: Router,
 
 
-  ) { }
-
-  @ViewChild('dropdownlistelement')
-
-  public dropdownlistObject!: DropDownListComponent;
-  private addButtonElement: HTMLElement | null | undefined;
-  onAddItems() {
-    this.addButtonElement = document.getElementById('addButton');
-    this.dropdownlistObject.addItem({ Fname: 'jordan', Id: 'friend4' });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  constructor(private router: Router) {
   }
-
-  
-
-  public dataFields: Object = { text: ' Fname', value: 'Id' };
-  public localData: Object[] = [
-
-    { Fname: 'Omar Hernandez', Id: 'friend1' },
-      { Fname: 'Omar Hernandez', Id: 'friend2' },
-  { Fname: 'Omar Hernandez', Id: 'friend3' }
-
-
-
-  ];
-
-
-
-
-
-
 
   displayedColumns: string[] = [ 'name'];
   dataSource = new MatTableDataSource(ALBUM_DATA);
@@ -362,7 +293,6 @@ export class HomeComponent {
 
   
 
-  
 
 
   onClick() {

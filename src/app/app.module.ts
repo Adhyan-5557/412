@@ -21,10 +21,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
 import { CommentsModule } from './comments/comments.module';
-import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
-import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
-
-
 
 @NgModule({
   declarations: [
@@ -35,13 +31,11 @@ import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
   ],
   imports: [
     BrowserModule,
-    ButtonModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     MatIconModule,
     BrowserAnimationsModule,
     MatInputModule,
-    DropDownListModule,
     MatButtonModule,
     MatCardModule,
     AppRoutingModule,
