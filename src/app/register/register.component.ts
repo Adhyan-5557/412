@@ -1,17 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
 import { FormControlName, FormBuilder, Validators } from '@angular/forms'
+import { UserService } from '../services/user.service';
+import { DialogRef } from '@angular/cdk/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
 
-  constructor(private router: Router, private _fb: FormBuilder) { 
+  constructor(private router: Router, private _fb: FormBuilder,
+    private userService: UserService,
+    private dialogRef: MatDialogRef<RegisterComponent>,
+    @Inject(MAT_DIALOG_DATA) public data:any
+    ) { 
+
     this.registerForm = this._fb.group({
       firstname:'',
       lastname: '',
@@ -24,7 +33,8 @@ export class RegisterComponent {
     });
   }
 
-  ngOnInit(){
+  ngOnInit():void {
+    this.registerForm.patchValue(this.data)
 
   }
 
@@ -43,7 +53,17 @@ export class RegisterComponent {
   onClick3(){
     // this is to submit the login form. upon clicking it redirects pace to home screen. 
     if(this.registerForm.valid){
-      console.log(this.registerForm.value);
+      this.userService.addUser(this.registerForm.value).subscribe({
+        next: (val:any) => { 
+          alert('User added successfully'); 
+          this.dialogRef.close(); 
+
+          
+        },
+        error: (err:any) => {
+          console.error(err);
+        }
+      });
     }
     this.router.navigateByUrl('/home');
   }

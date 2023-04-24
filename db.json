@@ -32,5 +32,27 @@
       "parentId": "2",
       "createdAt": "2021-08-16T23:00:33.010+02:00"
     }
+  ],
+  "users": [
+    {
+      "firstname": "fgh",
+      "lastname": "fgh",
+      "email": "asd@edfty",
+      "DOB": "2023-04-03T07:00:00.000Z",
+      "gender": "male",
+      "password": "sdfgh",
+      "hometown": "dfghj",
+      "id": 1
+    },
+    {
+      "firstname": "p",
+      "lastname": "p",
+      "email": "P@p",
+      "DOB": "2023-04-17T07:00:00.000Z",
+      "gender": "Female",
+      "password": "hjk",
+      "hometown": "hjuik",
+      "id": 2
+    }
   ]
 }

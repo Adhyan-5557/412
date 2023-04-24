@@ -42,7 +42,10 @@ export class LoginComponent implements OnInit {
 
   onClick2(){
     // this is to submit the login form. upon clicking it redirects pace to home screen. 
-    this._dialog.open(RegisterComponent);
+   const dialogRef = this._dialog.open(RegisterComponent);
+   dialogRef.afterClosed().subscribe({
+    
+   })
   }
 
 }
