@@ -1,0 +1,37 @@
+<div mat-dialog-content align="center">
+    <form [formGroup]="photoForm">
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <span clas="title">Add Photo</span>
+                <span class="toolbar-item-spacer"></span>
+                <button class="button-13" role="button" mat-dialog-close>Cancel</button>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <br>
+        <div>
+            <h1>Photo name</h1>
+            <div>
+                <mat-form-field appearance="fill">
+                    <input formControlName="photoName" matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <h2>Caption</h2>
+                <mat-form-field appearance="fill">
+                    <input formControlName="photoCaption" matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <h2>Tags</h2>
+                <mat-form-field appearance="fill">
+                    <textarea formControlName="photoTag" matInput></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <div mat-dialog-action [align]="'end'">
+            <button class="button-13" role="button" mat-dialog-close (click)="addPhoto">Add</button>
+        </div>
+    </form>
+
+
+</div>
